@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Gomes | Software Engineer & Cloud</title>
+    <!-- Script antecipado para evitar flash de tema (FOUC) ao carregar -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            const theme = savedTheme || (systemPrefersLight ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão de alternância de tema Claro/Escuro -->
+    <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema claro/escuro">
+        <i class="fas fa-sun theme-icon-sun"></i>
+        <i class="fas fa-moon theme-icon-moon"></i>
+    </button>
+
+    <div class="app-layout">
+        <!-- Sidebar / Perfil Fixo no Desktop -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <div class="avatar-badge">CG</div>
+                <h1>Caio Gomes</h1>
+                <p class="role">Desenvolvedor Full Stack & Cloud</p>
+                <p class="bio">
+                    Graduando em Sistemas de Informação focado em arquiteturas escaláveis, inteligência de dados, telemetria industrial e ecossistema AWS.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <a href="mailto:caioaug.dev@protonmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>caioaug.dev@protonmail.com</span>
+                </a>
+                <a href="https://github.com/oCaioAug/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/oCaioAug</span>
+                </a>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/caio-augusto-gomes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/oCaioAug/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Certificações & Idiomas</h3>
+                <div class="cert-item">
+                    <i class="fab fa-aws cert-icon"></i>
+                    <div>
+                        <strong>AWS Certified Cloud Practitioner</strong>
+                        <small>Amazon Web Services</small>
+                    </div>
+                </div>
+                <div class="languages-list">
+                    <span><strong>Inglês:</strong> Avançado (C1)</span>
+                    <span><strong>Espanhol:</strong> Intermediário (B1)</span>
+                    <span><strong>Português:</strong> Nativo</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Educação</h3>
+                <div class="edu-item">
+                    <strong>Bacharelado em Sistemas de Informação</strong>
+                    <p>AEDB (2023 - 2026)</p>
+                </div>
+            </div>
+
+            <footer class="sidebar-footer">
+                <p>Deploy via <strong>AWS</strong></p>
+            </footer>
+        </aside>
+
+        <!-- Conteúdo Principal / Dashboard -->
+        <main class="content-feed">
+            <!-- Habilidades Técnicas categorizadas -->
+            <section class="card">
+                <h2 class="card-title"><i class="fas fa-layer-group"></i> Stack Tecnológica</h2>
+                
+                <div class="stack-group">
+                    <span class="group-label">Linguagens & Frameworks</span>
+                    <div class="tag-cloud">
+                        <span>PHP (Laravel)</span>
+                        <span>TypeScript</span>
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>React Native</span>
+                        <span>C# (.NET)</span>
+                        <span>Python (Flask)</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <span class="group-label">Banco de Dados & ORM</span>
+                    <div class="tag-cloud">
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>MariaDB</span>
+                        <span>SQL Server</span>
+                        <span>Prisma ORM</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <span class="group-label">Cloud, DevOps & Infra</span>
+                    <div class="tag-cloud highlight">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>CI/CD</span>
+                        <span>Linux</span>
+                        <span>Git</span>
+                        <span>DNS & Networking</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiência Profissional -->
+            <section class="card">
+                <h2 class="card-title"><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+                
+                <div class="experience-timeline">
+                    <!-- Previsiown -->
+                    <article class="timeline-block">
+                        <div class="block-header">
+                            <div>
+                                <h3>Estagiário Full Stack</h3>
+                                <span class="company">Previsiown &bull; Resende, RJ</span>
+                            </div>
+                            <span class="period badge-active">10/2025 — Atual</span>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Desenvolvimento e manutenção de soluções de software voltadas para inteligência de dados, IA e telemetria para os setores industrial e logístico.</li>
+                            <li>Colaboração direta no ciclo de vida de ferramentas digitais customizadas para suporte à tomada de decisão em tempo real e gestão inteligente de ativos.</li>
+                            <li>Participação ativa na arquitetura e integração de dados em nuvem, acelerando processos críticos dos clientes.</li>
+                        </ul>
+                    </article>
+
+                    <!-- AWS Student Builder Group -->
+                    <article class="timeline-block">
+                        <div class="block-header">
+                            <div>
+                                <h3>Founder & Student Leader</h3>
+                                <span class="company">AWS Student Builder Group &bull; AEDB</span>
+                            </div>
+                            <span class="period">09/2025 — Atual</span>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Liderança do primeiro AWS Student Builder Group na instituição, coordenando eventos técnicos e workshops práticos sobre nuvem.</li>
+                            <li>Mentoria de estudantes na trilha de certificação AWS e gestão da comunidade acadêmica de tecnologia.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Stellantis -->
+                    <article class="timeline-block">
+                        <div class="block-header">
+                            <div>
+                                <h3>Estagiário de Redes</h3>
+                                <span class="company">Stellantis &bull; Porto Real, RJ</span>
+                            </div>
+                            <span class="period">03/2025 — 10/2025</span>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Suporte técnico em infraestrutura de redes e garantia de estabilidade dos sistemas na planta industrial automotiva.</li>
+                            <li>Gestão de inventário de TI e controle analítico de demandas técnicas.</li>
+                        </ul>
+                    </article>
+
+                    <!-- AEDB -->
+                    <article class="timeline-block">
+                        <div class="block-header">
+                            <div>
+                                <h3>Estagiário em ADS</h3>
+                                <span class="company">Associação Educacional Dom Bosco &bull; Resende, RJ</span>
+                            </div>
+                            <span class="period">03/2023 — 03/2025</span>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Desenvolvimento de funcionalidades web para o sistema acadêmico empregando Laravel e React.</li>
+                            <li>Refatoração de sistemas legados para versões modernas do PHP, elevando padrões de segurança e performance.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Projetos em Destaque -->
+            <section class="card">
+                <h2 class="card-title"><i class="fas fa-terminal"></i> Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-box">
+                        <div class="project-top">
+                            <h4>S.A.L.A.</h4>
+                            <span class="project-tag">TCC</span>
+                        </div>
+                        <p class="project-desc">
+                            Plataforma de gestão de logística de laboratórios, salas e ambientes corporativos e educacionais. Arquitetada com gerenciamento de estado em tempo real para evitar conflitos de horários.
+                        </p>
+                        <div class="project-techs">
+                            <code>Next.js</code><code>TypeScript</code><code>Tailwind</code><code>Prisma</code><code>Postgres</code><code>Docker</code>
+                        </div>
+                    </div>
+
+                    <div class="project-box">
+                        <div class="project-top">
+                            <h4>BeWear</h4>
+                            <span class="project-tag">E-commerce</span>
+                        </div>
+                        <p class="project-desc">
+                            Loja virtual completa com fluxo de ponta a ponta, checkout integrado à API da Stripe e orquestração de Webhooks assíncronos para reconciliação resiliente de pagamentos.
+                        </p>
+                        <div class="project-techs">
+                            <code>Next.js</code><code>Stripe API</code><code>Prisma</code><code>Tailwind</code><code>Docker</code>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script de alternância de tema -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(nextTheme);
+        });
+
+        // Ouve mudanças na preferência de cor do sistema caso o usuário não tenha preferência salva
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+</body>
+</html>
